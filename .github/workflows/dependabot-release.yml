@@ -23,7 +23,7 @@ jobs:
       # 2. Set up your language environment (Example: Node.js)
       # Change this block depending on how chilledwindows is built
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-base: '20'
           cache: 'npm'
