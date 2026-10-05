@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write      # Required to create releases, push tags, and merge the PR
   pull-requests: write # Required to approve and comment on the PR
+  workflows: write     # REQUIRED to allow auto-merging updates to GitHub Action files safely
 
 jobs:
   build-and-release:
@@ -26,7 +27,7 @@ jobs:
 
       # 3. Add NuGet to download external packages
       - name: Setup NuGet
-        uses: nuget/setup-nuget@v4
+        uses: nuget/setup-nuget@v1
         with:
           nuget-version: 'latest'
 
