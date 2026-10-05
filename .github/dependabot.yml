@@ -1,15 +1,7 @@
 version: 2
 updates:
-  # 1. Monitor GitHub Actions updates
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-
-  # 2. Monitor NuGet dependencies for ChilledWindows
+  # Monitor ONLY NuGet dependencies for ChilledWindows (Actions updates are blocked)
   - package-ecosystem: "nuget"
     directory: "/"
     schedule:
       interval: "weekly"
-
-# Last manual check: 10/05/2026 00:46:48
